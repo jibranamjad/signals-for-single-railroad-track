@@ -1,0 +1,53 @@
+
+int Gled1=7;
+int Rled1=2; 
+int Gled2=5;
+int Rled2=4; 
+int senRead0=0; 
+int senRead1=1;
+int senRead2=2; 
+int senRead3=3;
+int limit = 1000;            
+void setup()
+ {  
+  pinMode(Rled1,OUTPUT);  
+  pinMode(Gled1,OUTPUT);
+  pinMode(Rled2,OUTPUT);  
+  pinMode(Gled2,OUTPUT);
+  
+  digitalWrite(Rled1,LOW);  
+  digitalWrite(Gled1,HIGH);
+  
+  digitalWrite(Rled2,LOW);  
+  digitalWrite(Gled2,HIGH); 
+  Serial.begin(9600);
+           
+ }  
+void loop()  
+ {  
+  int val=analogRead(senRead0);
+  int val1=analogRead(senRead1);
+  int val2=analogRead(senRead2);
+  int val3=analogRead(senRead3);
+  Serial.println(val3);
+  //Serial.println(val3);
+        
+  if(val >= limit || val2 >= limit)
+  {  
+    digitalWrite(Rled2,HIGH);
+    digitalWrite(Gled2,LOW);
+    digitalWrite(Rled1,HIGH);
+    digitalWrite(Gled1,LOW);
+   delay(20);  
+  }
+
+  if(val3 >= limit || val1 >= limit)        
+  {  
+    digitalWrite(Rled2,LOW);
+    digitalWrite(Gled2,HIGH);
+    digitalWrite(Rled1,LOW);
+    digitalWrite(Gled1,HIGH);
+   delay(20);  
+  }
+  
+ }  
