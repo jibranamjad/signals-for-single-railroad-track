@@ -16,7 +16,10 @@ Our System will detect the incoming trains through sensors and provides singals 
 3. IR Infrared Obstacle Avoidance Sensor 
 4. Breadboard Jumper Wires
 5. Breadboard Jumper Wires
-6. LED lights (red, green, yellow)
+6. LED lights (red, green)
 7. USB cable
+8. Resistor
 
 # SCHEMATIC DIAGRAM:
+
+<img width="1651" alt="Schematic Diagram" src="https://user-images.githubusercontent.com/45298174/86972638-8c737c80-c173-11ea-949e-971c6a1796a0.png">
